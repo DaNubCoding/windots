@@ -211,7 +211,7 @@ widgets:
     options:
       label: "<span>{icon}</span> {temp}"
       label_alt: "<span>{icon}</span> {location}: Min {min_temp}, Max {max_temp}, Humidity {humidity}"
-      api_key: "e086ca7cef8f4efe9ec12737241212"
+      api_key: "env"
       update_interval: 600 #Update interval in seconds, Min 600
       hide_decimal: true
       units: "metric"
