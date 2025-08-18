@@ -1,0 +1,32 @@
+[Unit]
+Name = "komorebi"
+Description = "Tiling WM"
+Requires = [
+    "whkd",
+    "kanata",
+]
+
+[Service]
+Kind = "Simple"
+Restart = "Never"
+
+[[Service.ExecStartPre]]
+Executable = "komorebic.exe"
+Arguments = ["fetch-asc"]
+
+[Service.ExecStart]
+Executable = "komorebic.exe"
+Arguments = ["start"]
+
+[[Service.ExecStop]]
+Executable = "komorebic.exe"
+Arguments = ["stop"]
+
+[[Service.ExecStopPost]]
+Executable = "komorebic.exe"
+Arguments = ["restore-windows"]
+
+[Service.Healthcheck.Command]
+Executable = "komorebic.exe"
+Arguments = ["state"]
+DelaySec = 1

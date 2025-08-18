@@ -1,0 +1,21 @@
+[Unit]
+Name = "main"
+Description = "Launch everything"
+Requires = [
+    "altsnap",
+    "kando",
+    "komorebi",
+    "yasb",
+]
+
+[Service]
+Kind = "Oneshot"
+Restart = "Never"
+Autostart = true
+
+[Service.ExecStart]
+Executable = "cowsay.exe"
+Arguments = [
+    "--random",
+    "All done :D"
+]

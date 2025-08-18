@@ -1,0 +1,254 @@
+{
+  "$schema": "https://github.com/LGUG2Z/komorebi/raw/refs/heads/master/schema.json",
+  "app_specific_configuration_path": "$env:KOMOREBI_CONFIG_HOME/applications.json",
+  "window_hiding_behaviour": "Cloak",
+  "cross_monitor_move_behaviour": "Insert",
+  "floating_window_aspect_ratio": "Widescreen",
+  "default_workspace_padding": 10,
+  "default_container_padding": 10,
+  "global_work_area_offset": {
+    "top": 48,
+    "bottom": 42,
+    "left": 0,
+    "right": 0
+  },
+  "border": true,
+  "border_width": 6,
+  "border_offset": -1,
+  "transparency": true,
+  "transparency_alpha": 230,
+  "transparency_ignore_rules": [
+    {
+      "kind": "Title",
+      "id": "YouTube",
+      "matching_strategy": "Contains"
+    },
+    {
+      "kind": "Title",
+      "id": "Twitch",
+      "matching_strategy": "Contains"
+    },
+    {
+      "kind": "Exe",
+      "id": "python.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "libresprite.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "javaw.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Title",
+      "id": "Paint 3D",
+      "matching_strategy": "EndsWith"
+    },
+    {
+      "kind": "Exe",
+      "id": "electron.exe",
+      "matching_strategy": "Equals"
+    }
+  ],
+  "mouse_follows_focus": false,
+  "animation": {
+    "enabled": true,
+    "fps": 165,
+    "duration": {
+      "movement": 175,
+      "transparency": 200
+    },
+    "style": {
+      "movement": "EaseOutExpo",
+      "transparency": "EaseOutSine"
+    }
+  },
+  "theme": {
+    "palette": "Catppuccin",
+    "name": "Mocha",
+    "single_border": "Mauve",
+    "unfocused_border": "Blue",
+    "monocle_border": "Peach",
+    "floating_border": "Yellow",
+    "stack_border": "Green",
+    "stackbar_background": "Surface0"
+  },
+  "stackbar": {
+    "height": 30,
+    "mode": "OnStack",
+    "label": "Title",
+    "tabs": {
+      "width": 450,
+      "font_family": "Fira Code"
+    }
+  },
+  "floating_applications": [
+    {
+      "kind": "Exe",
+      "id": "python.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "electron.exe",
+      "matching_strategy": "Equals"
+    }
+  ],
+  "slow_application_identifiers": [
+    {
+      "kind": "Exe",
+      "id": "firefox.exe",
+      "matching_strategy": "Equals"
+    }
+  ],
+  "ignore_rules": [
+    {
+      "kind": "Exe",
+      "id": "hl.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "kando.exe",
+      "matching_strategy": "Equals"
+    }
+  ],
+  "manage_rules": [
+    {
+      "kind": "Exe",
+      "id": "libresprite.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Class",
+      "id": "WeChatMainWndForPC",
+      "matching_strategy": "Equals"
+    }
+  ],
+  "object_name_change_applications": [
+    {
+      "kind": "Class",
+      "id": "Engine",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Class",
+      "id": "SALFRAME",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Class",
+      "id": "GlassWndClass-GlassWindowClass-.*",
+      "matching_strategy": "Regex"
+    },
+    {
+      "kind": "Exe",
+      "id": "libresprite.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "NVIDIA app.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Class",
+      "id": "WeChatMainWndForPC",
+      "matching_strategy": "Equals"
+    }
+  ],
+  "monitors": [
+    {
+      "workspaces": [
+        {
+          "name": "I",
+          "layout": "BSP",
+          "window_container_behaviour_rules": {
+            "0": "Create",
+            "4": "Append"
+          }
+        },
+        {
+          "name": "II",
+          "layout": "BSP",
+          "window_container_behaviour_rules": {
+            "0": "Create",
+            "4": "Append"
+          }
+        },
+        {
+          "name": "III",
+          "layout": "BSP",
+          "window_container_behaviour_rules": {
+            "0": "Create",
+            "4": "Append"
+          }
+        },
+        {
+          "name": "IV",
+          "layout": "BSP",
+          "window_container_behaviour_rules": {
+            "0": "Create",
+            "4": "Append"
+          }
+        },
+        {
+          "name": "V",
+          "layout": "BSP",
+          "window_container_behaviour_rules": {
+            "0": "Create",
+            "4": "Append"
+          }
+        }
+      ]
+    },
+    {
+      "workspaces": [
+        {
+          "name": "I",
+          "layout": "BSP",
+          "window_container_behaviour_rules": {
+            "0": "Create",
+            "3": "Append"
+          }
+        },
+        {
+          "name": "II",
+          "layout": "BSP",
+          "window_container_behaviour_rules": {
+            "0": "Create",
+            "3": "Append"
+          }
+        },
+        {
+          "name": "III",
+          "layout": "BSP",
+          "window_container_behaviour_rules": {
+            "0": "Create",
+            "3": "Append"
+          }
+        },
+        {
+          "name": "IV",
+          "layout": "BSP",
+          "window_container_behaviour_rules": {
+            "0": "Create",
+            "3": "Append"
+          }
+        },
+        {
+          "name": "V",
+          "layout": "BSP",
+          "window_container_behaviour_rules": {
+            "0": "Create",
+            "3": "Append"
+          }
+        }
+      ]
+    }
+  ]
+}

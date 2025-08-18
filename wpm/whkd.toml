@@ -1,0 +1,13 @@
+[Unit]
+Name = "whkd"
+Description = "Hotkey daemon"
+
+[Service]
+Kind = "Simple"
+Restart = "Never"
+
+[Service.ExecStart]
+Executable = "whkd.exe"
+
+[Service.Healthcheck.Process]
+DelaySec = 1

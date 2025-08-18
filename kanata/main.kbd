@@ -1,0 +1,88 @@
+(defcfg
+  process-unmapped-keys yes
+  movemouse-smooth-diagonals yes
+  movemouse-inherit-accel-state yes
+  delegate-to-first-layer yes
+)
+
+(defalias
+  ;; Return to main
+  main (layer-switch main)
+  ;; Symbols and navigation
+  prog (one-shot-press 2500 (layer-while-held programmer))
+  ;; Mouse controls
+  mse (layer-switch mouse)
+  ;; Toggle mouse controls
+  tgms (tap-hold 0 250 grv (layer-while-held mouse))
+  ;; Colemak-DH layout
+  cole (on-press toggle-virtualkey vcole)
+  ;; Capslock triple-tap for real capslock
+  rcap (tap-dance 200 (@prog caps))
+)
+
+(defsrc
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  slck prnt brk
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl      lmet lalt          spc        ralt menu rctl
+)
+
+(deflayermap main
+  caps @prog
+  grv @tgms
+  [ bspc
+  ] del
+  brk pp
+  prnt (multi met sft s)
+)
+
+(defvirtualkeys
+  vcole (layer-while-held colemak-dh)
+)
+
+(defalias
+  ;; Create a new line under the current line
+  ;; equivalent to pressing end followed by return
+  nret (multi end ret)
+  ;; Mouse movements with acceleration
+  mmau (movemouse-accel-up 12 1200 1 10)
+  mmad (movemouse-accel-down 12 1200 1 10)
+  mmal (movemouse-accel-left 12 1200 1 10)
+  mmar (movemouse-accel-right 12 1200 1 10)
+  ;; Fast mouse (speeds up mouse while pressed)
+  fmse (movemouse-speed 500)
+  ;; Mouse wheel
+  mwu (mwheel-up 5 7)
+  mwd (mwheel-down 5 7)
+  mwl (mwheel-left 5 7)
+  mwr (mwheel-right 5 7)
+)
+
+(deflayer programmer
+  _     _    _    _    _   _   _    _   _    _    _   _    _     _     _    _
+  XX    _    _    _    _   _   _    _   _    _    _   XX   XX    XX
+  _     XX   XX   [    ]   S-, S-.  +   =    -    S-8 _    _     @cole
+  @rcap lsft @mse S-9  S-0 S-- ◀    ▼   ▲    ▶    ;   XX   @nret
+  _     XX   XX   S-[  S-] S-6 home end pgup pgdn XX  _
+  _          _    _         lctl        _    _    _
+)
+
+(deflayer mouse
+  @main _     _     _     _     _     _     _     _     _     _     _     _     _     _     _
+  _     mrgt  mmid  mlft  _     _     _     _     _     _     _     _     _     _
+  _     @main _     @fmse _     _     @mwl  @mwd  @mwu  @mwr  _     _     _     _
+  @fmse _     mrgt  mmid  mlft  _     @mmal @mmad @mmau @mmar _     _     _
+  _     _     _     _     _     _     _     _     _     _     _     _
+  _           _     _            @fmse            _     _     _
+)
+
+(deflayer colemak-dh
+  _     _   _   _   _   _   _   _   _   _   _   _   _   _   _   _
+  _     _   _   _   _   _   _   _   _   _   _   _   _   _
+  _     q   w   f   p   b   j   l   u   y   ;   _   _   _
+  @prog a   r   s   t   g   m   n   e   i   o   _   _
+  _     x   c   d   v   z   k   h   _   _   _   _
+  _         _   _         _         _   _   _
+)

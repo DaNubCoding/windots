@@ -1,0 +1,13 @@
+[Unit]
+Name = "kando"
+Description = "Pie menu"
+
+[Service]
+Kind = "Simple"
+Restart = "Never"
+
+[Service.ExecStart]
+Executable = "kando.exe"
+
+[Service.Healthcheck.Process]
+DelaySec = 1

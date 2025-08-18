@@ -1,0 +1,111 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "display": {
+    "separator": " "
+  },
+  "modules": [
+    "title",
+    {
+      "type": "separator",
+      "string": "~",
+      "length": 40
+    },
+    {
+      "type": "os",
+      "key": "",
+      "keyColor": "#f2cdcd"
+    },
+    {
+      "type": "host",
+      "key": "",
+      "keyColor": "#f2cdcd"
+    },
+    {
+      "type": "kernel",
+      "key": "",
+      "keyColor": "#f2cdcd"
+    },
+    {
+      "type": "uptime",
+      "key": "",
+      "keyColor": "#f2cdcd"
+    },
+    {
+      "type": "packages",
+      "key": "",
+      "keyColor": "#f2cdcd"
+    },
+    {
+      "type": "shell",
+      "key": "",
+      "keyColor": "#f2cdcd"
+    },
+    {
+      "type": "display",
+      "key": "󰍹",
+      "format": "{width}x{height} @ {refresh-rate}Hz ({inch}\")",
+      "keyColor": "#a6e3a1"
+    },
+    {
+      "type": "wm",
+      "key": "",
+      "format": "Komorebi WM",
+      "keyColor": "#a6e3a1"
+    },
+    {
+      "type": "terminaltheme",
+      "format": "Catppuccin Mocha (Mauve)",
+      "key": "",
+      "keyColor": "#a6e3a1"
+    },
+    {
+      "type": "terminalfont",
+      "key": "",
+      "format": "{name}",
+      "keyColor": "#a6e3a1"
+    },
+    {
+      "type": "cpu",
+      "key": "",
+      "format": "{name} ({cores-logical}) {freq-max}",
+      "keyColor": "#cba6f7"
+    },
+    {
+      "type": "gpu",
+      "key": "󰢮",
+      "format": "{name} ({dedicated-total})",
+      "keyColor": "#cba6f7"
+    },
+    {
+      "type": "memory",
+      "key": "",
+      "keyColor": "#cba6f7"
+    },
+    {
+      "type": "disk",
+      "key": "󰋊",
+      "format": "{size-used} / {size-total} ({size-percentage})",
+      "keyColor": "#cba6f7"
+    },
+    "break",
+    {
+      "type": "colors",
+      "block": {
+        "range": [
+          0,
+          7
+        ],
+        "width": 5
+      }
+    }
+  ],
+  "logo": {
+    "type": "file",
+    "source": "C:/Users/DaNub/.config/fastfetch/logo.txt",
+    "color": {
+      "1": "#89b4fa",
+      "2": "#cdd6f4",
+      "3": "#f5c2e7"
+    }
+  }
+}

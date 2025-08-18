@@ -1,0 +1,684 @@
+:root {
+    --rosewater: #f5e0dc;
+    --flamingo: #f2cdcd;
+    --pink: #f5c2e7;
+    --mauve: #cba6f7;
+    --red: #f38ba8;
+    --maroon: #eba0ac;
+    --peach: #fab387;
+    --yellow: #f9e2af;
+    --green: #a6e3a1;
+    --teal: #94e2d5;
+    --sky: #89dceb;
+    --sapphire: #74c7ec;
+    --blue: #89b4fa;
+    --lavender: #b4befe;
+    --text: #cdd6f4;
+    --subtext1: #bac2de;
+    --subtext0: #a6adc8;
+    --overlay2: #9399b2;
+    --overlay1: #7f849c;
+    --overlay0: #6c7086;
+    --surface2: #585b70;
+    --surface1: #45475a;
+    --surface0: #282936;
+    --base: #1e1e2e;
+    --mantle: #181825;
+    --crust: rgb(17, 17, 27);
+}
+
+* {
+    font-size: 13px;
+    font-weight: 500;
+    font-family: "JetBrainsMono NFP";
+    margin: 0;
+    padding: 0;
+}
+.yasb-bar {
+    padding: 0;
+    margin: 0;
+}
+.widget {
+    padding: 0 8px;
+    margin: 0 4px;
+    border-radius: 6px;
+}
+.widget .icon {
+    font-size: 18px;
+}
+.win-btn {
+    background-color: var(--yellow);
+}
+.win-btn .icon {
+    color: var(--base);
+}
+
+.komorebi-control-widget {
+    background-color: var(--sky);
+}
+.komorebi-control-widget .icon {
+    font-size: 20px;
+    color: var(--base);
+    font-weight: 600;
+}
+.komorebi-control-menu {
+    border: 3px solid var(--sky);
+    border-radius: 8px;
+    background-color: var(--base);
+}
+.komorebi-control-menu .button {
+    color: rgba(162, 177, 199, 0.4);
+    padding: 8px 16px;
+    font-size: 32px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.04);
+}
+.komorebi-control-menu .button.active {
+    color: var(--text);
+    background-color: var(--surface1);
+}
+.komorebi-control-menu .button:hover {
+    background-color: var(--surface2);
+}
+
+.komorebi-control-menu .button:disabled,
+.komorebi-control-menu .button.active:disabled {
+    background-color: var(--surface0);
+    color: var(--subtext0);
+}
+.komorebi-control-menu .footer .text {
+    font-size: 12px;
+    color: var(--overlay1);
+}
+
+.komorebi-workspaces {
+    background-color: var(--base);
+    border: 2px solid var(--sky);
+}
+.komorebi-workspaces .offline-status {
+    color: var(--red);
+    font-size: 12px;
+    padding: 0 4px;
+    font-weight: 600;
+}
+.komorebi-workspaces .ws-btn {
+    border: none;
+    background-color: var(--sky);
+    margin: 0px 4px;
+    padding: 0;
+    color: rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    height: 10px;
+    width: 10px;
+}
+.komorebi-workspaces .ws-btn:hover {
+    background-color: var(--sapphire);
+}
+.komorebi-workspaces .ws-btn.populated {
+    background-color: var(--maroon);
+}
+
+.komorebi-workspaces .ws-btn.active {
+    color: rgba(0, 0, 0, 0);
+    background-color: var(--mauve);
+    width: 32px;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.media-widget {
+    background-color: var(--blue);
+    padding: 0;
+}
+.media-widget .btn {
+    color: var(--base);
+    margin: 0 3px 0 5px;
+    font-size: 18px;
+}
+.media-widget .label {
+    background-color: var(--base);
+    margin: 2px;
+    border-radius: 6px;
+    padding: 0 6px;
+    color: var(--blue);
+}
+
+.media-menu {
+    min-width: 420px;
+    max-width: 420px;
+    background-color: var(--base);
+    border: 3px solid var(--blue);
+    border-radius: 8px;
+}
+.media-menu .title,
+.media-menu .source {
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 10px;
+    color: var(--text);
+}
+.media-menu .artist {
+    font-size: 12px;
+    color: var(--subtext1);
+    margin-left: 12px;
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
+.media-menu .source {
+    font-size: 11px;
+    color: #000;
+    font-weight: normal;
+    border-radius: 3px;
+    background-color: #bac2de;
+    padding: 2px 4px;
+
+}
+/* The source class name is the same as what you see in the media widget; just replace spaces with dashes and convert it to lowercase.
+Example: "Windows Media" becomes "windows-media" */
+.media-menu .source.firefox {
+    background-color: var(--red);
+    color: var(--base);
+}
+.media-menu .source.spotify {
+    background-color: var(--green);
+    color: var(--base);
+}
+.media-menu .source.edge {
+    background-color: var(--teal);
+    color: var(--base);
+}
+.media-menu .source.windows-media {
+    background-color: var(--sapphire);
+    color: var(--base);
+}
+
+.media-menu .btn {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 10px 2px 0px 2px;
+    min-width: 40px;
+    max-width: 40px;
+    min-height: 40px;
+    max-height: 40px;
+    border-radius: 20px;
+    color: var(--text);
+    background-color: var(--surface0);
+}
+.media-menu .btn.prev {
+    margin-left: 14px;
+}
+.media-menu .btn:hover {
+    background-color: var(--surface2);
+}
+.media-menu .btn.play {
+    background-color: var(--surface1);
+    font-size: 20px
+}
+.media-menu .btn.play:hover {
+    background-color: var(--surface2);
+}
+.media-menu .btn.disabled:hover,
+.media-menu .btn.disabled {
+    color: var(--overlay1);
+    background-color: var(--mantle);
+}
+
+.media-menu .playback-time {
+    font-size: 13px;
+    color: var(--subtext0);
+    margin-top: 20px;
+    min-width: 100px;
+}
+.media-menu .progress-slider {
+    height: 10px;
+    margin: 5px 4px;
+    border-radius: 3px;
+}
+.media-menu .progress-slider::groove {
+    background: transparent;
+    height: 2px;
+    border-radius: 3px;
+    background: var(--surface1);
+
+}
+.media-menu .progress-slider::groove:hover {
+    background: transparent;
+    height: 6px;
+    border-radius: 3px;
+    background: var(--surface1);
+}
+.media-menu .progress-slider::sub-page {
+    background: var(--text);
+    border-radius: 3px;
+    height: 4px;
+}
+
+.clock-widget {
+    background-color: var(--teal);
+    padding: 0;
+}
+.clock-widget .icon {
+    color: var(--base);
+    padding: 0 6px;
+}
+.clock-widget .label {
+    background-color: var(--base);
+    color: var(--teal);
+    padding: 0 6px;
+    margin: 2px;
+    border-radius: 6px;
+}
+
+.calendar {
+    background-color: var(--base);
+    border: 3px solid var(--teal);
+    border-radius: 8px;
+}
+.calendar .calendar-table,
+.calendar .calendar-table::item {
+    background-color: var(--base);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+.calendar .calendar-table::item:selected {
+    color: var(--base);
+    background-color: var(--mauve);
+    border-radius: 10px;
+}
+.calendar .day-label {
+    margin-top: 20px;
+}
+.calendar .day-label,
+.calendar .month-label,
+.calendar .date-label,
+.calendar .week-label,
+.calendar .holiday-label {
+    font-size: 16px;
+    color: var(--text);
+    font-weight: 700;
+    min-width: 180px;
+    max-width: 180px;
+}
+.calendar .week-label,
+.calendar .holiday-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--subtext0);
+}
+.calendar .holiday-label {
+    color: var(--subtext1);
+    font-weight: 700;
+}
+.calendar .month-label {
+    font-weight: normal;
+}
+.calendar .date-label {
+    font-size: 88px;
+    font-weight: 900;
+    color: var(--teal);
+    margin-top: -12px;
+}
+
+.volume-widget {
+    background-color: var(--yellow);
+    padding: 0;
+}
+.volume-widget .icon {
+    color: var(--base);
+    padding: 0 6px;
+}
+.volume-widget .label {
+    background-color: var(--base);
+    color: var(--yellow);
+    padding: 0 8px;
+    margin: 2px;
+    border-radius: 6px;
+}
+.volume-slider {
+    border: none;
+}
+.volume-slider::groove {
+    background-color: var(--surface1);
+    border-radius: 3px;
+    height: 1px;
+}
+.volume-slider::groove::hover {
+    height: 6px;
+}
+.volume-slider::sub-page {
+    background-color: var(--text);
+    border-radius: 3px;
+    height: 1px;
+}
+.volume-slider::sub-page::hover {
+    height: 6px;
+}
+.audio-menu {
+    background-color: var(--base);
+    border: 3px solid var(--yellow);
+    border-radius: 8px;
+}
+.audio-container .device {
+    background-color:transparent;
+    border: none;
+    padding:6px 8px 6px 4px;
+    margin: 2px 0;
+    font-size: 12px;
+    border-radius: 4px;
+}
+.audio-container .device.selected {
+    background-color: var(--surface1);
+    border: 2px solid var(--mauve);
+}
+.audio-container .device:hover {
+    background-color: var(--surface2);
+}
+.audio-container .device {
+    color: var(--text);
+}
+
+.weather-widget {
+    background-color: var(--green);
+    padding: 0;
+}
+.weather-widget .icon {
+    color: var(--base);
+    padding: 0 6px;
+}
+.weather-widget .label {
+    background-color: var(--base);
+    color: var(--green);
+    padding: 0 6px;
+    margin: 2px;
+    border-radius: 6px;
+}
+.weather-card {
+    background-color: rgba(17, 17, 27, 0.2);
+}
+.weather-card-today .label {
+    font-size: 12px;
+}
+.weather-card-today .label.location {
+    font-size: 24px;
+    font-weight: 700;
+}
+.weather-card-day {
+    border: 1px solid #45475a;
+    border-radius: 8px;
+    background-color:  rgba(17, 17, 27, 0.2);
+}
+.weather-card-day .label {
+    font-size: 12px;
+}
+
+.wifi-widget {
+    background-color: var(--green);
+    padding: 0;
+}
+.wifi-widget .icon {
+    color: var(--base);
+    padding: 0 6px;
+}
+.wifi-widget .label {
+    background-color: var(--base);
+    color: var(--green);
+    padding: 0 6px;
+    margin: 2px;
+    border-radius: 6px;
+}
+
+.wifi-menu {
+    background-color: var(--base);
+    max-height: 350px;
+    min-height: 375px;
+    min-width: 375px;
+}
+
+.wifi-menu .progress-bar {
+    max-height: 2px;
+}
+
+.wifi-menu .progress-bar::chunk {
+    background-color: var(--green);
+}
+
+.wifi-menu .header {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    padding: 12px;
+    background-color: var(--base);
+    color: var(--text);
+}
+
+.wifi-menu .error-message {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    padding: 12px;
+    background-color: var(--red);
+    color: var(--text);
+    border-bottom: 1px solid var(--overlay1);
+}
+
+.wifi-menu .wifi-list {
+    background-color: var(--base);
+    margin-right: 3px;
+}
+
+.wifi-menu .wifi-item {
+    min-height: 35px;
+    padding: 2px 12px;
+    margin: 2px 4px;
+}
+
+.wifi-menu .wifi-item:hover {
+    background-color: var(--surface2);
+    border-radius: 6px;
+}
+
+.wifi-menu .wifi-item[active=true] {
+    background-color: var(--surface0);
+    font-size: 14px;
+    border-radius: 6px;
+    border: 2px solid var(--mauve);
+    min-height: 80px;
+}
+
+.wifi-menu .wifi-item .icon {
+    font-family: 'Segoe Fluent Icons';
+    font-size: 26px;
+    margin-right: 10px;
+}
+
+.wifi-menu .wifi-item .name {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.wifi-menu .wifi-item .password {
+    background-color: transparent;
+    font-size: 14px;
+}
+
+.wifi-menu .wifi-item .status {
+    font-size: 14px;
+}
+
+.wifi-menu .wifi-item .strength {
+    font-size: 14px;
+}
+
+.wifi-menu .wifi-item .controls-container {
+    padding-top: 8px;
+}
+
+.wifi-menu .wifi-item .connect {
+    background-color: var(--surface2);
+    color: var(--text);
+    padding: 4px 30px;
+    border-radius: 4px;
+    border: none;
+    font-size: 14px;
+}
+
+.wifi-menu .wifi-item .connect:hover {
+    background-color: var(--mauve);
+    color: var(--base);
+}
+
+.wifi-menu .wifi-item .connect:pressed {
+    background-color: var(--surface1);
+    color: var(--text);
+}
+
+.wifi-menu .footer {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 12px;
+    margin-top: 2px;
+    color: var(--subtext1);
+    background-color: var(--mantle);
+    border-top: 1px solid var(--overlay0);
+}
+
+.wifi-menu .footer .settings-button {
+    background-color: transparent;
+    border: none;
+    padding: 0 2px;
+    min-width: 26px;
+    min-height: 26px;
+    color: var(--subtext1);
+}
+
+.wifi-menu .footer .refresh-icon {
+    font-family: 'Segoe Fluent Icons';
+    background-color: transparent;
+    border: none;
+    min-width: 26px;
+    min-height: 26px;
+    color: var(--subtext1);
+}
+
+.wifi-menu .footer .refresh-icon:hover {
+    background-color: var(--surface2);
+    border-radius: 4px;
+}
+
+.power-menu-widget {
+    background-color: var(--flamingo);
+    padding: 0;
+}
+
+.power-menu-widget .label {
+    color: var(--base);
+    padding: 0 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.language-widget {
+    background-color: var(--peach);
+    padding: 0;
+}
+.language-widget .icon {
+    color: var(--base);
+    padding: 0 6px;
+}
+.language-widget .label {
+    background-color: var(--base);
+    color: var(--peach);
+    padding: 0 8px;
+    margin: 2px;
+    border-radius: 6px;
+}
+.taskbar-widget {
+    background-color: var(--base);
+    border: 2px solid var(--pink);
+    padding: 0 4px;
+}
+.taskbar-widget .app-icon {
+    padding: 0 4px;
+    border: none;
+    margin: 0;
+}
+.active-window-widget {
+    background-color: var(--mauve);
+    padding: 0;
+}
+.active-window-widget .label {
+    color: var(--mauve);
+    background-color: var(--base);
+    padding: 0 8px;
+    margin: 2px;
+    border-radius: 6px;
+}
+.active-window-widget .icon {
+    padding: 0 8px;
+    border: none;
+    margin: 0;
+    background-color: var(--mauve);
+}
+
+/*POWER MENU POPUP*/
+.uptime {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: var(--subtext0);
+    font-weight: 600;
+}
+.power-menu-popup {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 12px;
+}
+.power-menu-popup .button {
+    padding: 0;
+    width: 180px;
+    height: 230px;
+    border-radius: 8px;
+    background-color: var(--base);
+    color: var(--lavender);
+    border: 8px solid var(--mantle);
+    margin: 0px;
+}
+.power-menu-popup .button.hover {
+    background-color: var(--mantle);
+}
+.power-menu-popup .button .label {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--lavender);
+
+}
+.power-menu-popup .button .icon {
+    font-size: 64px;
+    padding-top: 32px;
+    color: var(--lavender);
+}
+.power-menu-popup .button.cancel .icon {
+    padding: 0;
+    margin: 0;
+}
+.power-menu-popup .button.cancel .label {
+    margin: 0;
+}
+
+.power-menu-popup .button.cancel {
+    height: 32px;
+    border-radius: 4px;
+    border: none;
+    background-color: var(--base);
+}
+.power-menu-popup .button.cancel:hover {
+    background-color: var(--mantle);
+}
+
+.cava-widget {
+    background-color: var(--base);
+    border: 2px solid var(--blue);
+    padding: 0;
+}

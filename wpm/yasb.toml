@@ -1,0 +1,29 @@
+[Unit]
+Name = "yasb"
+Description = "Status bar"
+Requires = [
+    "komorebi",
+]
+
+[Service]
+Kind = "Simple"
+Restart = "Never"
+
+[Service.ExecStart]
+Executable = "yasbc.exe"
+Arguments = [
+    "start",
+]
+
+[[Service.ExecStop]]
+Executable = "yasbc.exe"
+Arguments = [
+    "stop",
+]
+
+[Service.Healthcheck.Command]
+Executable = "yasbc.exe"
+Arguments = [
+    "log",
+]
+DelaySec = 1

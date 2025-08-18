@@ -1,0 +1,13 @@
+[Unit]
+Name = "altsnap"
+Description = "Window moving and resizing"
+
+[Service]
+Kind = "Simple"
+Restart = "Never"
+
+[Service.ExecStart]
+Executable = "altsnap.exe"
+
+[Service.Healthcheck.Process]
+DelaySec = 1
