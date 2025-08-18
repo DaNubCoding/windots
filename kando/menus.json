@@ -1,0 +1,758 @@
+{
+  "menus": [
+    {
+      "shortcut": "Control+Alt+Shift+F1",
+      "shortcutID": "example-menu",
+      "centered": false,
+      "root": {
+        "type": "submenu",
+        "name": "General",
+        "icon": "award_star",
+        "iconTheme": "material-symbols-rounded",
+        "children": [
+          {
+            "type": "submenu",
+            "name": "Apps",
+            "icon": "apps",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "submenu",
+                "name": "More",
+                "icon": "more_vert",
+                "iconTheme": "material-symbols-rounded",
+                "data": {},
+                "children": [
+                  {
+                    "type": "command",
+                    "name": "Modrinth",
+                    "icon": "command-item.svg",
+                    "iconTheme": "kando",
+                    "data": {
+                      "command": "\"C:\\Program Files\\Modrinth App\\Modrinth App.exe\"",
+                      "delayed": false
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "start zen"
+                },
+                "name": "Firefox",
+                "icon": "firefoxbrowser",
+                "iconTheme": "simple-icons"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "\"C:\\Users\\DaNub\\AppData\\Local\\vesktop\\Vesktop.exe\"",
+                  "delayed": false
+                },
+                "name": "Discord",
+                "icon": "discord",
+                "iconTheme": "simple-icons"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "explorer",
+                  "detached": true
+                },
+                "name": "Files",
+                "icon": "files",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "code",
+                  "delayed": false
+                },
+                "name": "Code",
+                "icon": "vscode.png",
+                "iconTheme": "Custom"
+              }
+            ],
+            "angle": 0
+          },
+          {
+            "type": "submenu",
+            "data": {},
+            "name": "Extras",
+            "icon": "more_horiz",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "command",
+                "name": "Reload YASB",
+                "icon": "refresh",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "command": "sudo yasbc reload",
+                  "delayed": false
+                }
+              },
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "PrintScreen",
+                  "delayed": true
+                },
+                "name": "Screenshot",
+                "icon": "screenshot_region",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "ControlLeft+ShiftLeft+Escape",
+                  "delayed": true
+                },
+                "name": "Task Manager",
+                "icon": "view_list",
+                "iconTheme": "material-symbols-rounded"
+              }
+            ],
+            "angle": 90
+          },
+          {
+            "type": "submenu",
+            "data": {},
+            "name": "Power",
+            "icon": "power_settings_circle",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "command",
+                "data": {
+                  "command": "shutdown /s",
+                  "delayed": false
+                },
+                "name": "Shutdown",
+                "icon": "power_settings_new",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 90
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "shutdown /h",
+                  "delayed": false
+                },
+                "name": "Hibernate",
+                "icon": "terminal",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 180
+              }
+            ],
+            "angle": 180
+          },
+          {
+            "type": "submenu",
+            "data": {},
+            "name": "Audio",
+            "icon": "music_note",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "MediaTrackNext",
+                  "delayed": true
+                },
+                "name": "Next",
+                "icon": "skip_next",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 30
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "\"C:\\Users\\DaNub\\AppData\\Roaming\\Spotify\\Spotify.exe\"",
+                  "delayed": false
+                },
+                "name": "Spotify",
+                "icon": "spotify",
+                "iconTheme": "simple-icons",
+                "angle": 150
+              },
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "AudioVolumeMute",
+                  "delayed": true
+                },
+                "name": "Toggle Mute",
+                "icon": "volume_off",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 210
+              },
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "MediaPlayPause",
+                  "delayed": true
+                },
+                "name": "Play/Pause",
+                "icon": "play_pause",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 270
+              },
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "MediaTrackPrevious",
+                  "delayed": true
+                },
+                "name": "Previous",
+                "icon": "skip_previous",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 330
+              }
+            ],
+            "angle": 270
+          }
+        ]
+      },
+      "warpMouse": false,
+      "anchored": false,
+      "hoverMode": false
+    },
+    {
+      "root": {
+        "type": "submenu",
+        "name": "Komorebi",
+        "icon": "window",
+        "iconTheme": "material-symbols-rounded",
+        "children": [
+          {
+            "type": "submenu",
+            "data": {},
+            "name": "More Actions",
+            "icon": "more_horiz",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "command",
+                "data": {
+                  "command": "conhost --headless komorebic minimize",
+                  "delayed": true,
+                  "detached": false
+                },
+                "name": "Minimize",
+                "icon": "minimize",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 270
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "conhost --headless komorebic toggle-monocle",
+                  "delayed": true,
+                  "detached": false
+                },
+                "name": "Toggle Monocle",
+                "icon": "fullscreen",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 360
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "conhost --headless komorebic toggle-float",
+                  "delayed": true,
+                  "detached": false
+                },
+                "name": "Toggle Floating",
+                "icon": "select_window",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 450
+              }
+            ],
+            "angle": 0
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "conhost --headless komorebic cycle-workspace next",
+              "delayed": true,
+              "detached": false
+            },
+            "name": "Next Workspace",
+            "icon": "keyboard_double_arrow_right",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 45
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "conhost --headless komorebic move right",
+              "delayed": true,
+              "detached": false
+            },
+            "name": "Tile Right",
+            "icon": "arrow_right_alt",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 90
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "conhost --headless komorebic cycle-move-to-workspace next",
+              "delayed": true,
+              "detached": false
+            },
+            "name": "Move to Next Workspace",
+            "icon": "move_selection_right",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 135
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "conhost --headless komorebic close",
+              "delayed": true,
+              "detached": false
+            },
+            "name": "Close Window",
+            "icon": "close",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 180
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "conhost --headless komorebic cycle-move-to-workspace previous",
+              "delayed": true,
+              "detached": false
+            },
+            "name": "Move to Previous Workspace",
+            "icon": "move_selection_left",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 225
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "conhost --headless komorebic move left",
+              "delayed": true,
+              "detached": false
+            },
+            "name": "Tile Left",
+            "icon": "arrow_left_alt",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 270
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "conhost --headless komorebic cycle-workspace previous",
+              "delayed": true,
+              "detached": false
+            },
+            "name": "Previous Workspace",
+            "icon": "keyboard_double_arrow_left",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 315
+          }
+        ]
+      },
+      "shortcut": "Control+Alt+Shift+F2",
+      "shortcutID": "",
+      "centered": false,
+      "warpMouse": false,
+      "anchored": false,
+      "hoverMode": false
+    },
+    {
+      "root": {
+        "type": "submenu",
+        "name": "Browser",
+        "icon": "web",
+        "iconTheme": "material-symbols-rounded",
+        "children": [
+          {
+            "type": "hotkey",
+            "data": {
+              "hotkey": "ControlLeft+KeyR",
+              "delayed": true
+            },
+            "name": "Reload",
+            "icon": "autorenew",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 0
+          },
+          {
+            "type": "hotkey",
+            "data": {
+              "hotkey": "End",
+              "delayed": true
+            },
+            "name": "To End",
+            "icon": "keyboard_double_arrow_down",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 45
+          },
+          {
+            "type": "hotkey",
+            "data": {
+              "hotkey": "ControlLeft+KeyT",
+              "delayed": true
+            },
+            "name": "New",
+            "icon": "new_window",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 90
+          },
+          {
+            "type": "hotkey",
+            "data": {
+              "hotkey": "ControlLeft+KeyV",
+              "delayed": true
+            },
+            "name": "Paste",
+            "icon": "content_paste",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 135
+          },
+          {
+            "type": "hotkey",
+            "data": {
+              "hotkey": "ControlLeft+KeyW",
+              "delayed": true
+            },
+            "name": "Close",
+            "icon": "close",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 180
+          },
+          {
+            "type": "hotkey",
+            "data": {
+              "hotkey": "ControlLeft+KeyC",
+              "delayed": true
+            },
+            "name": "Copy",
+            "icon": "content_copy",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 225
+          },
+          {
+            "type": "hotkey",
+            "data": {
+              "hotkey": "ControlLeft+ShiftLeft+KeyT",
+              "delayed": true
+            },
+            "name": "Reopen",
+            "icon": "reopen_window",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 270
+          },
+          {
+            "type": "hotkey",
+            "data": {
+              "hotkey": "Home",
+              "delayed": true
+            },
+            "name": "To Top",
+            "icon": "keyboard_double_arrow_up",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 315
+          }
+        ]
+      },
+      "shortcut": "Control+Alt+Shift+F3",
+      "shortcutID": "",
+      "centered": false,
+      "warpMouse": false,
+      "anchored": false,
+      "conditions": {
+        "appName": "zen"
+      }
+    },
+    {
+      "root": {
+        "type": "submenu",
+        "name": "File Explorer",
+        "icon": "files",
+        "iconTheme": "material-symbols-rounded",
+        "children": [
+          {
+            "type": "hotkey",
+            "data": {
+              "hotkey": "AltLeft+ArrowUp",
+              "delayed": true
+            },
+            "name": "Up",
+            "icon": "arrow_upward",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 0
+          },
+          {
+            "type": "macro",
+            "data": {
+              "macro": [
+                {
+                  "type": "keyDown",
+                  "key": "ContextMenu",
+                  "delay": 10
+                },
+                {
+                  "type": "keyUp",
+                  "key": "ContextMenu",
+                  "delay": 10
+                },
+                {
+                  "type": "keyDown",
+                  "key": "KeyR",
+                  "delay": 10
+                },
+                {
+                  "type": "keyUp",
+                  "key": "KeyR",
+                  "delay": 10
+                }
+              ],
+              "delayed": true
+            },
+            "name": "Properties",
+            "icon": "settings",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 45
+          },
+          {
+            "type": "hotkey",
+            "data": {
+              "hotkey": "ControlLeft+KeyX",
+              "delayed": true
+            },
+            "name": "Cut",
+            "icon": "content_cut",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 90
+          },
+          {
+            "type": "hotkey",
+            "data": {
+              "hotkey": "ControlLeft+KeyV",
+              "delayed": true
+            },
+            "name": "Paste",
+            "icon": "content_paste",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 135
+          },
+          {
+            "type": "hotkey",
+            "data": {
+              "hotkey": "Delete",
+              "delayed": true
+            },
+            "name": "Delete",
+            "icon": "delete",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 180
+          },
+          {
+            "type": "hotkey",
+            "data": {
+              "hotkey": "ControlLeft+KeyC",
+              "delayed": true
+            },
+            "name": "Copy",
+            "icon": "content_copy",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 225
+          },
+          {
+            "type": "macro",
+            "data": {
+              "macro": [
+                {
+                  "type": "keyDown",
+                  "key": "ContextMenu",
+                  "delay": 10
+                },
+                {
+                  "type": "keyUp",
+                  "key": "ContextMenu",
+                  "delay": 10
+                },
+                {
+                  "type": "keyDown",
+                  "key": "KeyA",
+                  "delay": 10
+                },
+                {
+                  "type": "keyUp",
+                  "key": "KeyA",
+                  "delay": 10
+                }
+              ],
+              "delayed": true
+            },
+            "name": "Copy Path",
+            "icon": "copy_all",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 270
+          },
+          {
+            "type": "macro",
+            "data": {
+              "macro": [
+                {
+                  "type": "keyDown",
+                  "key": "ContextMenu",
+                  "delay": 10
+                },
+                {
+                  "type": "keyUp",
+                  "key": "ContextMenu",
+                  "delay": 10
+                },
+                {
+                  "type": "keyDown",
+                  "key": "KeyH",
+                  "delay": 10
+                },
+                {
+                  "type": "keyUp",
+                  "key": "KeyH",
+                  "delay": 10
+                },
+                {
+                  "type": "keyDown",
+                  "key": "KeyC",
+                  "delay": 10
+                },
+                {
+                  "type": "keyUp",
+                  "key": "KeyC",
+                  "delay": 10
+                }
+              ],
+              "delayed": true
+            },
+            "name": "Open With",
+            "icon": "menu_open",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 315
+          }
+        ]
+      },
+      "shortcut": "Control+Alt+Shift+F3",
+      "shortcutID": "",
+      "centered": false,
+      "warpMouse": false,
+      "anchored": false,
+      "conditions": {
+        "appName": "explorer"
+      }
+    },
+    {
+      "root": {
+        "type": "submenu",
+        "name": "Code",
+        "icon": "code",
+        "iconTheme": "material-symbols-rounded",
+        "children": [
+          {
+            "type": "macro",
+            "data": {
+              "macro": [
+                {
+                  "type": "keyDown",
+                  "key": "ArrowUp",
+                  "delay": 10
+                },
+                {
+                  "type": "keyUp",
+                  "key": "ArrowUp",
+                  "delay": 10
+                },
+                {
+                  "type": "keyDown",
+                  "key": "Enter",
+                  "delay": 10
+                },
+                {
+                  "type": "keyUp",
+                  "key": "Enter",
+                  "delay": 10
+                }
+              ],
+              "delayed": true
+            },
+            "name": "Run previous",
+            "icon": "play_arrow",
+            "iconTheme": "material-symbols-rounded"
+          },
+          {
+            "type": "hotkey",
+            "data": {
+              "hotkey": "ControlLeft+ShiftLeft+KeyZ",
+              "delayed": true
+            },
+            "name": "Redo",
+            "icon": "redo",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 90
+          },
+          {
+            "type": "hotkey",
+            "data": {
+              "hotkey": "Delete",
+              "delayed": true
+            },
+            "name": "Delete",
+            "icon": "delete",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 180
+          },
+          {
+            "type": "hotkey",
+            "data": {
+              "hotkey": "ControlLeft+Slash",
+              "delayed": true
+            },
+            "name": "Comment",
+            "icon": "comment",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 225
+          },
+          {
+            "type": "hotkey",
+            "data": {
+              "hotkey": "ControlLeft+KeyZ",
+              "delayed": true
+            },
+            "name": "Undo",
+            "icon": "undo",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 270
+          }
+        ]
+      },
+      "shortcut": "Control+Alt+Shift+F3",
+      "shortcutID": "",
+      "centered": false,
+      "warpMouse": false,
+      "anchored": false,
+      "conditions": {
+        "appName": "code"
+      }
+    }
+  ],
+  "collections": [
+    {
+      "name": "Favorites",
+      "icon": "favorite",
+      "iconTheme": "material-symbols-rounded",
+      "tags": [
+        "favs"
+      ]
+    }
+  ]
+}
