@@ -96,6 +96,11 @@
       "kind": "Exe",
       "id": "electron.exe",
       "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "javaw.exe",
+      "matching_strategy": "Equals"
     }
   ],
   "slow_application_identifiers": [

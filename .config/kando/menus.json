@@ -26,10 +26,10 @@
                   {
                     "type": "command",
                     "name": "Modrinth",
-                    "icon": "command-item.svg",
-                    "iconTheme": "kando",
+                    "icon": "modrinth",
+                    "iconTheme": "simple-icons",
                     "data": {
-                      "command": "\"C:\\Program Files\\Modrinth App\\Modrinth App.exe\"",
+                      "command": "\"C:\\Users\\DaNub\\AppData\\Local\\Modrinth App\\Modrinth App.exe\"",
                       "delayed": false
                     }
                   }
@@ -40,8 +40,8 @@
                 "data": {
                   "command": "start zen"
                 },
-                "name": "Firefox",
-                "icon": "firefoxbrowser",
+                "name": "Zen",
+                "icon": "zenbrowser",
                 "iconTheme": "simple-icons"
               },
               {
@@ -51,7 +51,7 @@
                   "delayed": false
                 },
                 "name": "Discord",
-                "icon": "discord",
+                "icon": "vencord",
                 "iconTheme": "simple-icons"
               },
               {
